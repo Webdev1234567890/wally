@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>$WALLY</title>
+    
+    <meta name="description" content="Welcome to 'Where is Wally'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="theme-color" content="#DC211D" />
+    <meta name="msapplication-navbutton-color" content="#DC211D" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#DC211D" />
+
+    <!-- FAVICON -->
+    <link rel="icon" href="ass/maincirclelogo.png">
+
+
+    <meta property="og:title" content="Where is Wally" />
+    <meta property="og:description" content="Welcome to 'Where is Wally'" />
+    <meta property="og:image" content="ass/maincirclelogo.png">
+
+    
+
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/wondys.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/slick.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+    <style>
+        @font-face {
+            font-family: "5yo";
+            src: url("fo/doves.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "doves";
+            src: url("fo/TimesSans.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "tommys";
+            src: url("fo/tommys.ttf") format("truetype");
+        }
+
+        h1 {
+            font-family: "5yo", sans-serif;
+        }
+
+        h2 {
+            font-family: "doves", sans-serif;
+        }
+
+        h3 {
+            font-family: "tommys", sans-serif;
+        }
+
+        .fa-bars {
+            font-size: 34px; /* Change this value to increase or decrease the size of the icon */
+            color: #ffffff; /* This keeps the icon white, adjust if needed */
+        }
+
+        #supply{
+            @media (max-width: 768px) {
+                width: 100%;
+                
+            }
+        }
+
+#pichart{
+    width: 30%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="cursor" style="z-index: 999999;">
+        <div class="cursor-inner"></div>
+    </div>
+
+
+
+
+
+
+    <div class="site-wrapper loaded" style="position: relative;">
+        <section id="hero">
+            <canvas id="wondy-fall"></canvas>
+
+            <header style=" position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures the header is on top */
+            background-color: #dc201dda;">
+                <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #dc201dda;">
+                    <div class="container-fluid">
+                        <!-- Logo on the left -->
+                        <a class="navbar-brand" href="/">
+                            <img src="ass/maincirclelogo.png" alt="Logo" style="height: 40px;">
+                        </a>
+        
+                        <!-- Hamburger menu icon on the right -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none;background: none;">
+                            <!-- <span class="navbar-toggler-icon"></span> -->
+                            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                        </button>
+        
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav ms-auto"> <!-- ms-auto will push the menu to the right -->
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link active" aria-current="page" href="#intro" style="color: white;font-size: 20px;font-family: 'doves';">About</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="#features" style="color: white;font-size: 20px;font-family: 'doves'">Features</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="#about"  style="color: white;font-size: 20px;font-family: 'doves'">Wallonomics</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="#roadmap"  style="color: white;font-size: 20px;font-family: 'doves'">Roadmap</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="#links" style="color: white;font-size: 20px;font-family: 'doves'">Links</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="text-center" style="position: relative; z-index: 99999;">
+                <div class="container">
+                    <div id="wondy-welkum-card-container">
+                        <div id="wondy-welkum-card">
+                            <div id="wondy-welkum-card-front">
+                                <img src="ass/maincirclelogo.png" />
+                            </div>
+                            <div id="wondy-welkum-card-back">
+                                <img src="ass/maincirclelogo.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1 style="display: inline-block; font-size: 44px; background-color: #fff;color: #DC211D;font-family: 'doves'">Welcome to Wally on Base.</h1><br>
+                    <h1 style="display: inline-block; font-size: 26p;margin-bottom: 100px; background-color: #fff;color: #DC211D;">CA: TBA</h1>
+                
+                </div>
+                <div style="position: relative; z-index: 99999; margin-bottom: px;">
+                    <img id="wondy-counter" src="ass/waldomiddle.png" />
+                </div>
+            </section>
+        </section>
+
+      
+
+        <div class="marquee reverse">
+            <p>
+                * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? *
+            </p>
+        </div>
+
+        <div class="container" id="intro" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      ">
+          <div style="max-width: 800px; width: 100%; text-align: center; margin-bottom: 60px">
+              
+            
+              <h1 style="font-size: 40px;color: #DC211D;font-family: 'doves'">About the Project</h1>
+              <h1 style="font-size: 24px; line-height: 1.6">
+                  
+
+                Welcome to "Where is Wally" – the memecoin that takes the classic fun of finding Wally into the world of crypto! <br><br>
+
+                If you’ve ever spent hours looking for Wally in a sea of characters, you’re going to love this.
+              </h1>
+              <h1 style="font-size: 40px;color: #DC211D;font-family: 'doves'">Why "Where is Wally"?</h1>
+              <h1 style="font-size: 24px; line-height: 1.6">
+                Our goal is simple: connect where is Wally to crypto. Investing and playing with crypto should be as fun as hunting for Wally in the books. With "Where is Wally", we’re creating a big community where you can play, earn, and enjoy the ride together.
+              </h1>
+          </div>
+          <img src="ass/lefrirght.gif" />
+      </div>
+
+      <div class="marquee reverse">
+        <p>
+            * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? *
+        </p>
+    </div>
+
+        <div class="container" id="features" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        margin-bottom: 50px;
+      ">
+      <img src="ass/wave.png"  />
+          <div style="max-width: 800px; width: 100%; text-align: center; margin-bottom: 60px;">
+              
+            
+              <h1 style="font-size: 40px;color: #DC211D;font-family: 'doves'">Features</h1>
+              <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                <!-- <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5" aria-label="Slide 5"></button>
+                </div> -->
+                <div class="carousel-inner mb-3">
+                    <div class="carousel-item active" >
+                        <div class="d-flex justify-content-center" >
+                            <div class="carousel-card d-flex justify-content-center align-items-center" style="background-image: url('ass/caracard.png');background-repeat: no-repeat;background-size: ;background-position: right;" >
+                                <h5 style="font-family: 'doves'">Bounty hunts</h5>
+                                <p style="margin-bottom: 100px;">Dive into our Wally posters, find the sneaky Wally, and grab some sweet Wally tokens as your reward.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="carousel-card d-flex justify-content-center align-items-center" style="background-image: url('ass/caracard(1).png');background-repeat: no-repeat;background-size: ;background-position: left;">
+                                <h5 style="font-family: 'doves'">Wally staking</h5>
+                                <p style="margin-bottom: 100px;">Lock up your Wally tokens and earn more. Whether you want to stake for a day or a month, we’ve got some juicy APRs waiting for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="carousel-card d-flex justify-content-center align-items-center" style="background-image: url('ass/caracard(2).png');background-repeat: no-repeat;background-size: ;background-position: right;">
+                                <h5 style="font-family: 'doves'">Wally NFTs</h5><br style="color: black;background-color: black;border: 3px solid black">
+                                <p>Collect and trade unique Wally-themed NFTs. These aren’t just pictures; they’re a piece of the legend, available for trading on platforms like OpenSea.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="carousel-card d-flex justify-content-center align-items-center" style="background-image: url('ass/caracard\ \(3\).png');background-repeat: no-repeat;background-size: ;background-position: left;">
+                                <h5 style="font-family: 'doves'">Wally game</h5>
+                                <p >A game where you search for Wally and win prizes. It’s like the classic hunt but in a whole new dimension!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="carousel-card d-flex justify-content-center align-items-center" style="background-image: url('ass/caracard.png');background-repeat: no-repeat;background-size: ;background-position: right;">
+                                <h5 style="font-family: 'doves'">Wally lottery</h5>
+                                <p style="margin-bottom: 100px;">Join our weekly lottery for a shot at winning cool prizes. Whether it’s cash or luxury items, you get to vote on what’s up for grabs each week.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="border: none;background-color: white;">
+                    <span class="carousel-control-prev-icon" style="filter: brightness(0) saturate(100%) invert(33%) sepia(100%) saturate(7500%) hue-rotate(2deg) brightness(100%) contrast(100%);
+                " aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="" type="button"  data-bs-target="#carouselExample" data-bs-slide="next"  style="border: none;background-color: white;">
+                    <span class="carousel-control-next-icon" style="filter: brightness(0) saturate(100%) invert(33%) sepia(100%) saturate(7500%) hue-rotate(2deg) brightness(100%) contrast(100%);
+                " aria-hidden="true"></span>
+                    <span class="visually-hidden "></span>
+                </button>
+            </div>
+          </div>
+          
+      </div>
+
+      <div class="marquee reverse">
+        <p>
+            * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? *
+        </p>
+    </div>
+
+        <section id="about" class="container-fluid text-center" style="padding-top: 30px; padding-bottom: 30px">
+            <h1 style="padding-bottom: 20px;font-family: 'doves';color: #DC211D;">Wallonomics</h1>
+            <p style="">Let's dive into the world of Wally tokenomics! Here, we'll break down how Wally tokens are distributed, used, and help the Wally ecosystem grow. Get ready for a simple yet exciting journey through the economics of Wally!</p>
+            
+
+            <div id="about-items">
+                <div class="about-item">
+                    <img src="ass/about.png" />
+                    <h1 style="font-family: 'doves'">Chain: <span style="color: blue;">Base</span></h1>
+                </div>
+               
+                <div class="about-item">
+                    <img src="image (12) (1).png" />
+                    <h1 style="font-family: 'doves'">Tax: 3/3<br> <span style="font-size: 15px;font-family: '5yo';color: #DC211D;">1% marketing, 1% development & 1% Liquidity</span></h1>
+                    
+                </div>
+                <div class="about-item" id="supply">
+                    <img src="image (14).png" />
+                    <h1 style="font-family: 'doves'">Supply: 1,000,000,000</h1>
+                </div>
+                <div class="special-item">
+                    <img id="piechart" src="ass/pichart.svg" />
+                    <h1 style="font-family: 'doves'">Distribution</h1>
+                </div>
+            </div>
+            <div style="margin-bottom: 30px">
+                <a class="buy-wondy-button" href="" role="button">Buy $WALLY</a>
+            </div>
+        </section>
+
+        <div class="marquee">
+            <p>
+                * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? *
+            </p>
+        </div>
+        <style>
+            .cs-font_24{
+                font-family: '5yo';
+            }
+            .cs-font_36{
+                font-size: 60px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 45px;
+                }
+            }
+            .col-lg-3{
+            
+           
+            }
+            .col-lg-3 h2{
+            font-size: 35px;
+            @media screen and (max-width: 768px) {
+                font-size: 25px;
+            }
+
+            }
+            .col-lg-3 ul{
+            font-size: 25px;
+           @media screen and (max-width: 768px) {
+            font-size: 22px;
+           }
+
+          
+
+           
+        }
+        </style>
+
+        <!-- portfolio section -->
+        <section id="roadmap" style="position: relative; z-index: 1;background-color: ;min-height: 70vh;display: flex;align-items: center;">
+            <div class="cs-height_70 cs-height_lg_40 "></div>
+            <div class="container-fluid mx-5">
+                <h1 class="cs-section_subtitle cs-m0 cs-font_36 cs-font_24_sm " style="color: #DC211D;text-align: center;font-family: 'doves';"> Roadmap </h1>
+              <div class="cs-seciton_heading cs-style1 wow fadeInUp " data-wow-duration="1s " data-wow-delay="0.2s ">
+                
+              </div>
+              <div class="cs-height_50 cs-height_lg_30 "></div>
+              <div class="cs-accent_seperator_1 cs-accent_color wow fadeInLeft " data-wow-duration="1s " data-wow-delay="0.4s "></div>
+              
+              <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <!-- Phase 1 Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="cs-card cs-style2">
+                        <div class="cs-card_number cs-accent_bg cs-white_color cs-center cs-primary_font cs-font_22 cs-bold">
+                            <div class="cs-card_tick"></div>
+                        </div>
+                        <div class="cs-height_30 cs-height_lg_15"></div>
+                        <div class="cs-card_in cs-light_bg">
+                            <h2 class="cs-font_24 cs-font_16_sm cs-m0" style="font-family: 'doves'">Phase 1: Launch of Wally</h2>
+                            <ul style="background-color: white; font-family: '5yo'; color: #DC211D;">
+                                <li>Launch Wally on Uniswap</li>
+                                <li>Update socials on Dexscreener</li>
+                                <li>Get BASE trending</li>
+                                <li>Reach 500 Wally holders</li>
+                                <li>First Wally bounty</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cs-height_25 cs-height_lg_25"></div>
+                </div>
+                <!-- Phase 2 Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="cs-card cs-style2">
+                        <div class="cs-card_number cs-accent_bg cs-white_color cs-center cs-primary_font cs-font_22 cs-bold">
+                            <div class="cs-card_tick"></div>
+                        </div>
+                        <div class="cs-height_30 cs-height_lg_15"></div>
+                        <div class="cs-card_in cs-light_bg">
+                            <h2 class="cs-font_24 cs-font_16_sm cs-m0" style="font-family: 'doves'">Phase 2: Community expansion</h2>
+                            <ul style="background-color: white; font-family: '5yo'; color: #DC211D;">
+                                <li>Reach 1,000 Wally holders</li>
+                                <li>List on CoinMarketCap and CoinGecko</li>
+                                <li>Launch Wally flexible and locked staking</li>
+                                <li>Launch the first weekly Wally lottery</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cs-height_25 cs-height_lg_25"></div>
+                </div>
+                <!-- Phase 3 Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="cs-card cs-style2">
+                        <div class="cs-card_number cs-accent_bg cs-white_color cs-center cs-primary_font cs-font_22 cs-bold">
+                            <div class="cs-card_tick"></div>
+                        </div>
+                        <div class="cs-height_30 cs-height_lg_15"></div>
+                        <div class="cs-card_in cs-light_bg">
+                            <h2 class="cs-font_24 cs-font_16_sm cs-m0" style="font-family: 'doves'">Phase 3: NFT Integration</h2>
+                            <ul style="background-color: white; font-family: '5yo'; color: #DC211D;">
+                                <li>Reach 5,000 Wally holders</li>
+                                <li>Introduce Wally NFTs with unique artwork</li>
+                                <li>Partner with artists for exclusive collections</li>
+                                <li>Promote NFTs on various platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cs-height_25 cs-height_lg_25"></div>
+                </div>
+                <!-- Phase 4 Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="cs-card cs-style2">
+                        <div class="cs-card_number cs-accent_bg cs-white_color cs-center cs-primary_font cs-font_22 cs-bold">
+                            <div class="cs-card_tick"></div>
+                        </div>
+                        <div class="cs-height_30 cs-height_lg_15"></div>
+                        <div class="cs-card_in cs-light_bg">
+                            <h2 class="cs-font_24 cs-font_16_sm cs-m0" style="font-family: 'doves'">Phase 4: Gamification</h2>
+                            <ul style="background-color: white; font-family: '5yo'; color: #DC211D;">
+                                <li>Reach 10,000 Wally holders</li>
+                                <li>Launch the first Wally game</li>
+                                <li>Get listing on our first CEX</li>
+                                <li>Release V2 roadmap and website</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cs-height_25 cs-height_lg_25"></div>
+                </div>
+            </div>
+            
+            </div>
+          </section>
+    
+            
+        </div>
+
+        <div class="marquee reverse">
+            <p>
+                * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? *
+            </p>
+        </div>
+
+        <div class="container-fluid" id="howtobuy" style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          min-height: 70vh;
+        ">
+           <div class="row">
+                <div class="col-lg-6 ">
+                    <h1 class="mx-5" style="font-family: 'doves';color: #DC211D;">How to buy</h1>
+                    <h3 class="mx-5" style="font-family: 'doves'">CREATE A WALLET</h3>
+                    <p class="mx-5" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#DC211D;">Download Metamask or your wallet of choice from the app store or Google Play for free. Desktop users, download the Google Chrome extension by going to Metamask.
+                    </p>
+                    <h3 class="mx-5" style="font-family: 'doves'">GET SOME ETH</h3>
+                    <p class="mx-5" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#DC211D;">Have ETH in your wallet to switch to $WALLY. If you don’t have any ETH, you can buy directly on Metamask, transfer from another wallet, or buy on another exchange and send it to your wallet.
+                    </p>
+                    <h3 class="mx-5" style="font-family: 'doves'">GO TO UNISWAP</h3>
+                    <p class="mx-5" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#DC211D;" >Connect to UNISWAP. Go to UNISWAP in google chrome or on the browser inside your Metamask app. Connect your wallet. Paste the $WALLY token address into Uniswap, select $WALLY, and confirm. When Metamask prompts you for a wallet signature, sign.
+                    </p>
+                    <h3 class="mx-5" style="font-family: 'doves'">SWAP</h3>
+                    <p class="mx-5" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#DC211D;">Switch ETH for $WALLY. We have no tax so keep in mind to use low slippage to avoid getting sandwiched!</p>
+                  
+                    </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                    <img src="ass/maincirclelogo.png" class="img-fluid" id="siu">
+                    </div>
+           </div>
+        </div>
+
+        <div class="marquee">
+            <p>
+                * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? * WHERE'S WALLY? *
+            </p>
+        </div>
+
+        <section class="text-center clearfix" style="margin-top: 100px" id="links">
+            <div class="container">
+                <div style="margin-bottom: 60px">
+                    <h1 style="font-size: 40px;font-family: 'doves'">Become a<span style="color: #bb252d"> wally hodler</span></h1>
+                    <h1 style="font-size: 30px;font-family: 'doves'; line-height: 1.6">
+                        Join the wally community <span style="color: #bb252d">for finding lifelong happiness</span>
+                    </h1>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- site footer -->
+        <footer class="text-center" style="padding-bottom: 20px">
+            <div class="container">
+                <ul class="social-icons list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://x.com/WallyonBase" target="_blank">
+                <img src="ass/icons/twitter.svg" height="75px" width="75px" />
+              </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://t.me/whereswallybase" target="_blank">
+                <img src="ass/icons/telegram.svg" height="55px" width="55px" />
+              </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="" target="_blank">
+                <img src="ass/icons/uniswap.svg" height="55px" width="55px" />
+              </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="" target="_blank">
+                <img src="ass/icons/dexscreener.svg" height="55px" width="55px" />
+              </a>
+                    </li>
+                </ul>
+                <h1 style="color: #bb252d;font-family: 'doves'">$WALLY</h1>
+            </div>
+        </footer>
+    </div>
+    <!-- end site wrapper -->
+
+    <!-- SCRIPTS -->
+    <script src="https://kit.fontawesome.com/876ddc5eb4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj+KsslFkCOt3TvJrX2AV/Gc3wOqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/custom-cursor.js" type="text/javascript"></script>
+    <script src="js/snowfall.js" type="text/javascript"></script>
+    <script src="js/wondys.js" type="text/javascript"></script>
+</body>
+
+</html>
